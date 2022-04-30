@@ -1,5 +1,5 @@
 // it ('Should say hello', () =>{console.log('Hello Leo')});
-import login from '../utils/login.js';
+import {login} from '../utils/login.js';
 
 it ('Should get login token',async()=>{
     const loginRequest = {
@@ -7,5 +7,6 @@ it ('Should get login token',async()=>{
         password: "NPR@lei56mynom14",
     }
     
-    await login(loginRequest);
+    const token = await login(loginRequest);
+    console.log("Token" + token)
 })
