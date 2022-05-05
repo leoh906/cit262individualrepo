@@ -1,0 +1,19 @@
+steps:
+ # This step builds the container image. This is how to make comments in yaml file
+  - name: "gcr.io/cloud-builders/docker"
+    id: Build
+    args:
+      - "build"
+      - "-t"
+      - "grc.io/$PROJECT_ID/stedi-tests-leo:latest" # This refers to a dock registry, we will use GCR
+      - "."
+      # timeout: 1800s, this is not necessay but a timeout of 1800s is 30 mins
+      # In google image we are using a docker image to build a docker image
+  - name: "gcr.io/cloud-builders/docker"
+    id: Push
+    args: 
+      - "push"
+      - "gcr.io/$PROJECT_ID/stedi-tests-leo:latest"
+
+
+---
