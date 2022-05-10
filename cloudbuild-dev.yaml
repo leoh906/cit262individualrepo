@@ -5,7 +5,7 @@ steps:
     args:
       - "build"
       - "-t"
-      - "grc.io/$PROJECT_ID/stedi-tests-leo:latest" # This refers to a dock registry, we will use GCR
+      - "gcr.io/$PROJECT_ID/stedi-tests-leo:latest" # This refers to a dock registry, we will use GCR
       - "."
       # timeout: 1800s, this is not necessay but a timeout of 1800s is 30 mins
       # In google image we are using a docker image to build a docker image
