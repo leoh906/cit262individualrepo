@@ -15,7 +15,7 @@ steps:
       - "push"
       - "gcr.io/$PROJECT_ID/stedi-tests-leo:latest"
   - name: "gcr.io/cloud-builders/docker"
-    id: Run
+    id: Run # This step will run a test file (aka step 3)
     args:
       - "run"
       - "gcr.io/$PROJECT_ID/stedi-tests-leo:latest"
