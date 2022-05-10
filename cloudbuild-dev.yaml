@@ -16,4 +16,3 @@ steps:
       - "gcr.io/$PROJECT_ID/stedi-tests-leo:latest"
 
 
----
