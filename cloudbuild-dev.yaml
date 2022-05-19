@@ -5,7 +5,7 @@ steps:
     args:
       - "build"
       - "-t"
-      - "gcr.io/$PROJECT_ID/stedi-tests-leo:latest" # This refers to a dock registry, we will use GCR
+      - "gcr.io/$PROJECT_ID/stedi-leo:latest" # This refers to a dock registry, we will use GCR
       - "."
       # timeout: 1800s, this is not necessay but a timeout of 1800s is 30 mins
       # In google image we are using a docker image to build a docker image
@@ -13,12 +13,12 @@ steps:
     id: Push
     args: 
       - "push"
-      - "gcr.io/$PROJECT_ID/stedi-tests-leo:latest"
+      - "gcr.io/$PROJECT_ID/stedi-leo:latest"
   - name: "gcr.io/cloud-builders/docker"
     id: Run # This step will run a test file (aka step 3)
     args:
       - "run"
-      - "gcr.io/$PROJECT_ID/stedi-tests-leo:latest"
+      - "gcr.io/$PROJECT_ID/stedi-leo:latest"
 
 
 

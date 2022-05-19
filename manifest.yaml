@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: leo-stedi
-          image: gcr.io/$PROJECT_ID/stedi-tests-leo:latest
+          image: gcr.io/project-funky-flex/stedi-leo:latest
           ports:
             - containerPort: 3000
           resources:
