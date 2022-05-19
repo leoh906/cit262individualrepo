@@ -17,6 +17,8 @@ spec:
       containers:
         - name: leo-stedi
           image: gcr.io/project-funky-flex/stedi-leo:latest
+          command: ["npm"]
+          args: ["run", "start"]
           ports:
             - containerPort: 3000
           resources:
