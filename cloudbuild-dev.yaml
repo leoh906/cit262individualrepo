@@ -14,6 +14,19 @@ steps:
     args: 
       - "push"
       - "gcr.io/$PROJECT_ID/stedi-leo:latest"
+    #This step will deploy the dev application in Kubernetes
+    name: 'gcr.io/cloud-builders/gke-deploy'
+    id: Deploy
+    args:
+    - run
+    - --filename=manifest.yaml
+    - --image=gcr.io/$PROJECT_ID/project-flunky-flex/stedi-leo:latest
+    - --location=us-east4-b
+    - --output=/tmp/outputdev
+    - --cluster=cluster-1
+
+
+
   - name: "gcr.io/cloud-builders/docker"
     id: Run # This step will run a test file (aka step 3)
     args:
