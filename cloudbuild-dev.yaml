@@ -20,7 +20,7 @@ steps:
     args:
     - run
     - --filename=manifest.yaml
-    - --image=gcr.io/$PROJECT_ID/stedi-leo:latest
+    - --image=gcr.io/project_funky_flex/stedi-leo:latest
     - --location=us-east4-b
     - --output=/tmp/outputdev
     - --cluster=cluster-1
@@ -31,7 +31,7 @@ steps:
     id: Run # This step will run a test file (aka step 3)
     args:
       - "run"
-      - "gcr.io/$PROJECT_ID/stedi-leo:latest"
+      - "gcr.io/project_funky_flex/stedi-leo:latest"
 
 
 
