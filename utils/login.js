@@ -14,7 +14,7 @@ const options = {
     }
 };
 
-    const apiResponse = await fetch('https://dev.stedi.me/login', options); // If we don't do an await, we will get a promise instead
+    const apiResponse = await fetch('http://localhost:3000/login', options); // If we don't do an await, we will get a promise instead
     const loginResponse = await apiResponse.text();
 
     return loginResponse;
