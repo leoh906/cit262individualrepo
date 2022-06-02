@@ -20,7 +20,7 @@ steps:
     args:
     - run
     - --filename=manifest.yaml
-    - --image=gcr.io/$PROJECT_ID/project-flunky-flex/stedi-leo:latest
+    - --image=gcr.io/$PROJECT_ID/stedi-leo:latest
     - --location=us-east4-b
     - --output=/tmp/outputdev
     - --cluster=cluster-1
